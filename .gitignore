@@ -1,0 +1,74 @@
+# ==========================================
+# 1. DONNÉES (CRITIQUE)
+# ==========================================
+# Ne jamais versionner les fichiers de l'INSEE ou les exports
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.zip
+*.gz
+*.tar
+*.parquet
+
+# Ignorer des dossiers de données entiers si vous en avez créés
+/csv_extract/
+/donnees/
+/exports/
+/inputs/
+/outputs/
+
+# ==========================================
+# 2. APACHE HOP & LOGS
+# ==========================================
+# Fichiers de logs générés lors des erreurs ou de l'exécution
+*.log
+/logs/
+/log/
+
+# Dossiers locaux de configuration et d'audit de Hop (ne pas partager)
+.hop/audit/
+.hop/history/
+.hop/config/
+*.hwc  # Fichiers de cache potentiels
+
+# ==========================================
+# 3. SÉCURITÉ & IDENTIFIANTS
+# ==========================================
+# Ne jamais versionner vos identifiants PostgreSQL
+.env
+.env.local
+.env.*
+credentials.json
+*.key
+*.pem
+
+# ==========================================
+# 4. BASES DE DONNÉES
+# ==========================================
+# Ignorer les exports ou dumps de PostgreSQL
+*.sql
+*.dmp
+*.bak
+*.sqlite
+*.db
+
+# ==========================================
+# 5. SYSTÈME D'EXPLOITATION
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ==========================================
+# 6. ÉDITEURS DE CODE (IDE)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
